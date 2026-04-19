@@ -8,7 +8,7 @@ each person owes — synced live across all devices via Firebase.
 
 ---
 
-![Road Wallet Screenshot](Screenshot 2026-04-19 151432.png)
+![Road Wallet Screenshot](road-wallet.png)
 
 ---
 
