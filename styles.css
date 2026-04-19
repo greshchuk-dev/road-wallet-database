@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #FFF7ED;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  color: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+h1 .fas {
+  font-size: 28px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    margin: 0 0 16px;
+  }
+  
+  h1 .fas {
+    font-size: 20px;
+  }
+}
+
+.heading-total {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select,
+input[type="number"],
+input[type="text"],
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #161616;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #115E59;
+  color: #fff;
+  cursor: pointer;
+  min-height: 44px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  select,
+  input[type="number"],
+  input[type="text"],
+  button[type="submit"] {
+    padding: 14px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+}
+
+.fas {
+  display: inline;
+  margin-right: 5px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li, .traveler-item {
+  padding: 12px 8px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+li:last-child, .traveler-item:last-child {
+  border-bottom: none;
+}
+
+#expense-list li button, .traveler-item button {
+  background-color: #FF8C38;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  li, .traveler-item {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  #expense-list li button, .traveler-item button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+button .fas {
+  margin: 0;
+}
+
+/* Modal styles */
+.modal {
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.55);
+  overflow-y: auto;
+}
+
+.display-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+  min-width: 280px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 90%;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #161616;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #FF8C38;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+  }
+}
+
+/* Styles for the "Open Travelers" button */
+#open-modal-button {
+  background-color: #115E59;
+  display: block;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  margin: 0 auto 28px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+#open-modal-button:hover, button:hover {
+  background-color: #238b84;
+}
+
+#expense-list li button:hover, .traveler-item button:hover {
+  background-color: #E8793C;
+}
+
+@media (max-width: 480px) {
+  #open-modal-button {
+    padding: 14px;
+    margin: 0 0 20px;
+  }
+}
+
+/* Styles for the Total Expenses Amount */
+#total-expenses-amount {
+  font-size: 20px;
+  font-weight: initial;
+}
+
+@media (max-width: 480px) {
+  #total-expenses-amount {
+    font-size: 18px;
+  }
+}
+
+#travelers-form h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#travelers-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .heading-total {
+    font-size: 16px;
+  }
+}
