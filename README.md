@@ -4,7 +4,7 @@ A real-time group travel expense tracker. Add travellers,
 log expenses by category, and instantly see how much
 each person owes — synced live across all devices via Firebase.
 
-**[Live Demo](#)** ← add Netlify URL once deployed
+**[Live Demo](road-wallet-by-iryna.netlify.app)** ← add Netlify URL once deployed
 
 ---
 
